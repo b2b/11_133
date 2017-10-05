@@ -1,0 +1,129 @@
+/*!
+ * TOOL FOR SELECTING EDUCATIONAL TECHNOLOGY 
+ * http://eskolar.com
+ * Version: 1.0.0
+ *
+ * Copyright 2015 b. kiss balint
+ * Released under the MIT license
+ * 
+ */
+
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial", "Verdana",
+		"sans-serif";
+	font-size: 80%;
+}
+
+.headertitle2 {
+	position: fixed;
+	z-index: 101;
+	/* 	overflow: auto; */
+	border-bottom: 1px double gray;
+	font-size: 18px;
+	font-weight: bold;
+	/* 	background-color: rgba(140, 255, 26, 0.6); */
+	/* 	background-color: rgba(255, 255, 26, 0.6); */
+	/* 	background-color: #F7F6F6; */
+	/* 	background-color: gray transparent 10%; */
+	background-color: #ffcc00;
+	/* 	color: gray; */
+	width: 100%;	
+}
+
+.ami {
+	color: white;
+	border: 1px solid blue;
+	background-color: gray;
+	width: 200px;
+}
+
+.chart {
+	z-index: 100;
+	position: fixed;
+	top: 30px;
+	right: 0;
+	float: right;
+	width: 600px;
+	height: 300px;
+	border: 2px dotted gray;
+}
+
+.myContainer {
+	position: absolute;
+	margin-top: 25px;
+	border: 2px dotted blue;
+	background-color: #F2F1F0;
+	width: 700px;
+}
+
+.mezo {
+	width: 400px;
+	border: 1px solid gray;
+	margin-bottom: 5px;
+	font-size: 12;
+	background-color: white;
+}
+
+.mezo_Title {
+	float: left;
+	background-color: #ffcc00;
+	font-weight: bold;
+	font-size: 14;
+	width: 270px;
+	height: 20px;
+}
+
+.infoBtn {
+	float: right;
+	background-color: red;
+	width: 50px;
+	font-size: 12px;
+	height: 20px;
+}
+
+.infofield {
+	display: none;
+	float: left;
+	background-color: #FCFCFB;
+	margin: 5px;
+	border: 1px solid blue;
+	width: 690px;
+	font-size: 100%;
+}
+
+#element_to_pop_up {
+	background-color: #fff;
+	border-radius: 15px;
+	color: #000;
+	display: none;
+	padding: 20px;
+	min-width: 400px;
+	min-height: 180px;
+}
+
+.b-close {
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.piechart {
+	float: left;
+	width: 300px;
+	height: 200px;
+	background-color: #efefef;
+}
+
+.piechartlegend {
+	float: right;
+	width: 300px;
+	height: 200px;
+	background-color: orange;
+}
+
+.labelresult {
+	background-color: #ffcc00;
+	font-weight: bold;
+	font-size: 16px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Balint Kiss my TOOL FOR SELECTING EDUCATIONAL TECHNOLOGY
+	apaBoard</title>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/myData.js"></script>
+<script type="text/javascript" src="js/info.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/Chart.js"></script>
+
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<link rel="stylesheet" href="css/stil.css">
+<!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
+<script>
+	$(function() {
+		$("#dialog").dialog({
+			title : "selector tool for apaBoard",
+			width : "400px"
+		});
+		$("#dialog").dialog();
+	});
+</script>
+
+</head>
+<body>
+
+
+	<div id="title" class="headertitle2">Balint Kiss - tool for
+		Selecting and Evaluating Readiness for Educational Technology
+		introduction with apaBoard system</div>
+
+	<div class="chart">
+		<canvas id="myChart"></canvas>
+
+		<div id="smallcontainer">
+			<div>
+				Total possible score: <label class="labelresult" id="sypoints"></label>
+
+				Your total score: <label class="labelresult" id="mytotalpoints">0</label>
+
+				Readiness percentage: <label class="labelresult" id="readiness">0</label>%
+
+			</div>
+
+		</div>
+
+
+
+		<div class="piechart">
+			<b>Maximum worth of a question</b>
+			<canvas id="myChart2"></canvas>
+
+		</div>
+		<div id="piechartleg" class="piechartlegend">
+			<!-- 			<label>sasasa</label> -->
+
+		</div>
+		<button onclick="buildTextevaluation()">detailed evaluation</button>
+		<button
+			onclick="myDialogAlert('This is a planned feature to save, and email the data from evaluation form')">save
+			or email</button>
+
+	</div>
+
+	<div id="container" class="myContainer"></div>
+
+
+
+
+	<div id="dialog" title="Basic dialog">
+
+		<img style="margin-right: 3px;" alt="asa" align="left"
+			src="http://www.gravatar.com/avatar/03dd2243e7705dc15c8bef65f6065671">
+
+		This is my tool made for
+		<h4>edx.org MITx: 11.133x Implementation and Evaluation of
+			Educational Technology</h4>
+		<h3>ASSIGNMENT 2.1: YOUR TOOL FOR SELECTING EDUCATIONAL
+			TECHNOLOGY</h3>
+		It is useful to analyse the readiness of an institution to implement
+		the <b> apaBoard and it's method</b> as an educational technology.<br>
+		Please fill this form and see whether your environment is ready for
+		using the <b>apaBoard</b>. <br> For better understanding a
+		question may use the <b> help nr. option</b> for each question.<br>
+		I included notes, questions, and comments.<br> <br> <br>Close
+		this window with the 'x' icon.
+
+	</div>
+
+</body>
+<!-- <label style="background-color: orange;"></label> -->
+<script type="text/javascript">
+	init();
+</script>
+
+<script type="text/javascript">
+	// http://stackoverflow.com/questions/9709209/html-select-only-one-checkbox-in-a-group
+	//the selector will match all input controls of type :checkbox
+	//and attach a click event handler 
+	$("input:checkbox").on('click', function() {
+		// in the handler, 'this' refers to the box clicked on
+		var $box = $(this);
+		var id = $(this).prop("id");
+		// 		alert(id);
+		if ($box.is(":checked")) {
+			// the name of the box is retrieved using the .attr() method
+			// as it is assumed and expected to be immutable
+			var group = "input:checkbox[name='" + $box.attr("name") + "']";
+			// the checked state of the group/box on the other hand will change
+			// and the current value is retrieved using .prop() method
+			$(group).prop("checked", false);
+			$box.prop("checked", true);
+
+		} else {
+			$box.prop("checked", false);
+		}
+		update(id);
+	});
+</script>
+
+
+
+<script type="text/javascript">
+	Chart.defaults.global.responsive = true;
+	var ctx = document.getElementById("myChart").getContext("2d");
+	var myLineChart = new Chart(ctx).Line(data, options);
+
+	var ctx2 = document.getElementById("myChart2").getContext("2d");
+
+	var myPieChart = new Chart(ctx2).Pie(data2, options2);
+	myPieChart.update();
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65452358-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</html>
